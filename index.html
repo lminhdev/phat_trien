@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ Thống Lưu Trữ Tài Liệu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-server"></i>
+                <h1>Kho Tài Liệu</h1>
+            </div>
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Tìm kiếm thư mục hoặc bài học...">
+            </div>
+        </header>
+
+        <main>
+            <div class="section-title">
+                <h2>Thư Mục Hệ Thống</h2>
+                <span class="item-count" id="itemCount">Đang tải...</span>
+            </div>
+
+            <div class="grid-container" id="folderGrid">
+                
+                <a href="#" class="folder-card">
+                    <div class="folder-icon html-color"><i class="fa-brands fa-html5"></i></div>
+                    <div class="folder-info">
+                        <h3>Lập Trình Web</h3>
+                        <p>UI Design, Glassmorphism, Responsive</p>
+                    </div>
+                </a>
+
+                <a href="#" class="folder-card">
+                    <div class="folder-icon cyber-color"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="folder-info">
+                        <h3>An Ninh Mạng</h3>
+                        <p>Kiến thức nền tảng, CTF, Mạng máy tính</p>
+                    </div>
+                </a>
+
+                <a href="#" class="folder-card">
+                    <div class="folder-icon python-color"><i class="fa-brands fa-python"></i></div>
+                    <div class="folder-info">
+                        <h3>Python & Game Logic</h3>
+                        <p>Thuật toán, ASCII graphics, Scripting</p>
+                    </div>
+                </a>
+
+                <a href="#" class="folder-card">
+                    <div class="folder-icon math-color"><i class="fa-solid fa-cube"></i></div>
+                    <div class="folder-info">
+                        <h3>Toán Hình Học Không Gian</h3>
+                        <p>Khối đa diện, Mặt nón, Mặt trụ, Cầu</p>
+                    </div>
+                </a>
+
+                <a href="#" class="folder-card">
+                    <div class="folder-icon chem-color"><i class="fa-solid fa-flask"></i></div>
+                    <div class="folder-info">
+                        <h3>Hóa Học Hữu Cơ</h3>
+                        <p>Alcohol, Phenol, Dẫn xuất Halogen</p>
+                    </div>
+                </a>
+                
+                <a href="#" class="folder-card">
+                    <div class="folder-icon doc-color"><i class="fa-solid fa-folder-open"></i></div>
+                    <div class="folder-info">
+                        <h3>Đề Thi & Bài Tập</h3>
+                        <p>Tổng hợp các bài kiểm tra tự luyện</p>
+                    </div>
+                </a>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
