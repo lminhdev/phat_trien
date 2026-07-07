@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const folderCards = document.querySelectorAll('.folder-card');
     const itemCountDisplay = document.getElementById('itemCount');
 
-    // Cập nhật số lượng thư mục ban đầu
+    
     const updateItemCount = (count) => {
         if (itemCountDisplay) {
             itemCountDisplay.textContent = `${count} thư mục`;
@@ -12,14 +12,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     updateItemCount(folderCards.length);
 
-    // Xử lý sự kiện tìm kiếm
+    
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             const searchTerm = e.target.value.toLowerCase().trim();
             let visibleCount = 0;
 
             folderCards.forEach(card => {
-                // Lấy cả tiêu đề và mô tả để tìm kiếm chính xác hơn
+                
                 const title = card.querySelector('h3').textContent.toLowerCase();
                 const desc = card.querySelector('p').textContent.toLowerCase();
 
