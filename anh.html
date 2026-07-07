@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tài liệu Tiếng Anh - Kho Tài Liệu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .back-btn { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--accent); margin-bottom: 2rem; font-weight: 600; }
+        .back-btn:hover { text-decoration: underline; }
+        .file-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem; }
+        .file-item { background: var(--glass-bg); border: 1px solid var(--glass-border); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 1.25rem; border-radius: 10px; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s; }
+        .file-item:hover { background: var(--hover-bg); border-color: rgba(255, 255, 255, 0.2); transform: translateX(4px); }
+        .file-name { display: flex; align-items: center; gap: 0.75rem; font-weight: 500; }
+        .file-name i { font-size: 1.25rem; color: #10b981; }
+        .download-btn { background: var(--accent); color: white; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.875rem; font-weight: 600; transition: opacity 0.2s; }
+        .download-btn:hover { opacity: 0.9; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-btn"><i class="fa-solid fa-arrow-left"></i> Quay lại trang chủ</a>
+        
+        <div class="section-title">
+            <h2><i class="fa-solid fa-language" style="color: #10b981; margin-right: 0.5rem;"></i> Danh Sách Tài Liệu Tiếng Anh</h2>
+        </div>
+
+        <div class="file-list">
+            <div class="file-item">
+                <div class="file-name">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>Ngữ pháp trọng tâm & Đề luyện THPT.pdf</span>
+                </div>
+                <a href="tai-lieu/ngu-phap-tieng-anh.pdf" class="download-btn" download><i class="fa-solid fa-download"></i> Tải về</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
