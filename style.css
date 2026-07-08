@@ -500,28 +500,28 @@ header {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 140px; /* Chiều dài bằng đúng bán kính vòng quay */
-    height: 60px; /* Tăng không gian chiều dọc để chứa 2-3 dòng */
-    margin-top: -30px; /* Căn giữa trục Y (bằng 1/2 chiều cao) */
-    transform-origin: 0% 50%; /* Chốt trục quay chuẩn tại đúng tâm */
+    width: 140px; 
+    height: 60px; 
+    margin-top: -30px; 
+    transform-origin: 0% 50%; 
     
-    /* Đẩy chữ ra sát mép ngoài vòng quay (nơi cung tròn rộng nhất) */
+    
     display: flex;
     align-items: center; 
     justify-content: flex-end; 
-    padding-right: 15px; /* Giữ khoảng cách an toàn với viền ngoài */
-    padding-left: 55px; /* Né hẳn khu vực nút QUAY ở tâm */
+    padding-right: 15px; 
+    padding-left: 55px; 
     box-sizing: border-box;
     
-    /* Hiệu chỉnh Font chữ */
+    
     color: #fff;
     font-weight: 700;
-    font-size: 11px; /* Tối ưu size chữ cho diện tích hẹp */
-    text-align: right; /* Ép chữ bám theo lề ngoài */
+    font-size: 11px; 
+    text-align: right; 
     line-height: 1.3;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.9);
     
-    /* Xử lý gập dòng gọn gàng */
+    
     white-space: normal; 
     overflow: hidden;
     z-index: 2;
