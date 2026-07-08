@@ -88,3 +88,38 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 800);
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    
+    const targetDate = new Date("June 11, 2027 00:00:00").getTime();
+
+    const daysEl = document.getElementById("cd-days");
+    const hoursEl = document.getElementById("cd-hours");
+    const minutesEl = document.getElementById("cd-minutes");
+    const secondsEl = document.getElementById("cd-seconds");
+
+    if (daysEl && hoursEl && minutesEl && secondsEl) {
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            
+            daysEl.innerText = days < 10 ? "0" + days : days;
+            hoursEl.innerText = hours < 10 ? "0" + hours : hours;
+            minutesEl.innerText = minutes < 10 ? "0" + minutes : minutes;
+            secondsEl.innerText = seconds < 10 ? "0" + seconds : seconds;
+
+            
+            if (distance < 0) {
+                clearInterval(timer);
+                document.querySelector(".time-blocks").innerHTML = "<h3 style='color: #10b981; margin: 1rem 0;'>CHÚC BẠN LÀM BÀI THI THẬT TỐT! 🚀</h3>";
+            }
+        }, 1000);
+    }
+});
