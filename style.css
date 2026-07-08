@@ -417,3 +417,141 @@ header {
     .time-box { min-width: 65px; padding: 0.8rem 0.5rem; }
     .time-box span:first-child { font-size: 1.8rem; }
 }
+
+.wheel-container {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(251, 191, 36, 0.3);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.wheel-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fbbf24;
+    margin-bottom: 2rem;
+}
+
+.wheel-header h3 { margin: 0; font-size: 1.2rem; letter-spacing: 1px; }
+
+.wheel-box {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+}
+
+.pointer {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 25px solid #ef4444;
+    z-index: 10;
+    filter: drop-shadow(0 0 5px rgba(239, 68, 68, 0.6));
+}
+
+.the-wheel {
+    width: 100%; 
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        from -30deg,
+        rgba(59, 130, 246, 0.4) 0deg 60deg,
+        rgba(16, 185, 129, 0.4) 60deg 120deg,
+        rgba(59, 130, 246, 0.4) 120deg 180deg,
+        rgba(16, 185, 129, 0.4) 180deg 240deg,
+        rgba(59, 130, 246, 0.4) 240deg 300deg,
+        rgba(16, 185, 129, 0.4) 300deg 360deg
+    );
+    border: 2px solid rgba(251, 191, 36, 0.5);
+    position: relative;
+    transition: transform 4s cubic-bezier(0.17, 0.67, 0.1, 1.05);
+    box-shadow: 0 0 25px rgba(251, 191, 36, 0.1);
+    overflow: hidden;
+}
+
+
+.the-wheel::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    border-radius: 50%;
+    background: 
+        linear-gradient(0deg, transparent 49.5%, rgba(255,255,255,0.3) 49.5%, rgba(255,255,255,0.3) 50.5%, transparent 50.5%),
+        linear-gradient(60deg, transparent 49.5%, rgba(255,255,255,0.3) 49.5%, rgba(255,255,255,0.3) 50.5%, transparent 50.5%),
+        linear-gradient(120deg, transparent 49.5%, rgba(255,255,255,0.3) 49.5%, rgba(255,255,255,0.3) 50.5%, transparent 50.5%);
+    pointer-events: none;
+}
+
+.slice-text {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    width: 45%; 
+    height: 20px;
+    margin-top: -10px; 
+    transform-origin: 0% 50%; 
+    padding-left: 20px; 
+    text-align: left;
+    line-height: 20px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    text-shadow: 1px 1px 3px #000;
+    z-index: 2;
+}
+
+.spin-center-btn {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 65px; 
+    height: 65px;
+    border-radius: 50%;
+    background: #0f172a;
+    color: #fbbf24;
+    font-weight: 900;
+    font-size: 1rem;
+    border: 3px solid #fbbf24;
+    cursor: pointer;
+    z-index: 5;
+    box-shadow: 0 0 15px rgba(251, 191, 36, 0.4);
+    transition: all 0.2s;
+}
+
+.spin-center-btn:hover { 
+    background: #fbbf24; 
+    color: #000; 
+    transform: translate(-50%, -50%) scale(1.05);
+}
+
+.spin-center-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: translate(-50%, -50%);
+}
+
+.spin-result-text {
+    margin-top: 2rem;
+    color: #10b981;
+    font-weight: bold;
+    font-size: 1.1rem;
+    min-height: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
