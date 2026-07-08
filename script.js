@@ -123,3 +123,50 @@ document.addEventListener("DOMContentLoaded", function() {
         }, 1000);
     }
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const spinBtn = document.getElementById('spinBtn');
+    const wheel = document.getElementById('studyWheel');
+    const spinResult = document.getElementById('spinResult');
+    let currentDegree = 0;
+
+    if (spinBtn && wheel) {
+        spinBtn.addEventListener('click', function() {
+            
+            spinBtn.disabled = true;
+            spinResult.style.color = '#9ca3af';
+            spinResult.innerText = "Vũ trụ đang tính toán...";
+
+            
+            const randomSpins = Math.floor(Math.random() * 5) + 5; 
+            const randomDegree = Math.floor(Math.random() * 360);
+            const totalDegree = (randomSpins * 360) + randomDegree;
+            
+            currentDegree += totalDegree;
+            
+            
+            wheel.style.transform = `rotate(${currentDegree}deg)`;
+
+            
+            setTimeout(() => {
+                const actualDeg = currentDegree % 360;
+                
+                
+                const pointerDeg = (360 - actualDeg) % 360;
+                const adjustedDeg = (pointerDeg + 30) % 360;
+
+                let resultText = "";
+                if (adjustedDeg >= 0 && adjustedDeg < 60) resultText = "Học 10 từ vựng";
+                else if (adjustedDeg >= 60 && adjustedDeg < 120) resultText = "Học 15 từ vựng";
+                else if (adjustedDeg >= 120 && adjustedDeg < 180) resultText = "BOT";
+                else if (adjustedDeg >= 180 && adjustedDeg < 240) resultText = "BOT";
+                else if (adjustedDeg >= 240 && adjustedDeg < 300) resultText = "BOT";
+                else resultText = "HỌC HỌC HỌC HỌC HỌC HỌC";
+
+                spinResult.style.color = '#fbbf24';
+                spinResult.innerText = `> ${resultText} <`;
+                spinBtn.disabled = false;
+            }, 4000);
+        });
+    }
+});
