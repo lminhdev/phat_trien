@@ -182,7 +182,7 @@ header {
         grid-template-columns: 1fr;
     }
 }
-/* --- CYBER-VAULT STYLES --- */
+
 .cyber-vault-section {
     margin-top: 4rem;
     display: flex;
@@ -219,7 +219,7 @@ header {
     margin: 0;
 }
 
-/* Giao diện Terminal */
+
 .terminal-screen {
     background: #000000;
     border: 1px solid #333;
@@ -303,7 +303,7 @@ header {
     min-height: 1.5rem;
 }
 
-/* Nội dung Vip */
+
 .unlock-success {
     text-align: center;
     padding: 2rem 0;
