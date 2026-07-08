@@ -16,20 +16,22 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    color: var(--text-main);
-    min-height: 100vh;
-    margin: 0;
-    
     
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
         url('IMG_4952.jpg');
     
-    background-size: cover;          
-    background-position: center;     
-    background-repeat: no-repeat;    
-    background-attachment: fixed;   
+    
+    background-size: contain; 
+    
+    
+    background-position: center;
+    
+    
+    background-repeat: no-repeat;
+    
+    
+    background-attachment: fixed;
     
     
     background-color: #000;
