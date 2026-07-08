@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function() {
             
             spinBtn.disabled = true;
             spinResult.style.color = '#9ca3af';
-            spinResult.innerText = "MINH LÊ đang tính toán...";
+            spinResult.innerText = "?";
 
             
             const randomSpins = Math.floor(Math.random() * 5) + 5; 
